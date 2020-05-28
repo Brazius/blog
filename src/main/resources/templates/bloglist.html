@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Blog - all posts</title>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <td>Title</td>
+                <td>Id</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="blog : ${blogs}"></tr>
+            <td th:text="${blog.title}"></td>
+            <td>
+                <a th:ref="@{/blogs/{id}(id=${blog.id})}">
+                    Plačiau
+                </a>
+            </td>
+        </tbody>
+    </table>
+</body>
+</html>
