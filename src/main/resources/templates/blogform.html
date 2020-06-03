@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog form</title>
+</head>
+<body>
+    <h1> Blogo forma</h1>
+    <form th:action="@{/blogs/blog}" method="post" th:object="${blog}">
+        <p>Id: <input type="text" th:field="*{id}"</p>
+        <p>Title: <input type="text" th:field="*{title}"</p>
+        <p>Description: <textarea cols="50" rows="10" th:field="*{description}"></textarea></p>
+        <p><input type="submit" th:value="${blog.id != null ? 'Redaguoti' : 'Kurti'}"/>
+    </form>
+</body>
+</html>

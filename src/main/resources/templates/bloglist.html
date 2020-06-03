@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html xmlns:th="https://www.thymeleaf.org" lang="en">
-
+<html lang="en"
+      xmlns:th="https://www.thymeleaf.org" >
 <head>
     <meta charset="UTF-8">
     <title>Blog - all posts</title>
@@ -8,19 +8,21 @@
 <body>
     <table>
         <thead>
-            <tr>
-                <td>Title</td>
-                <td>Id</td>
-            </tr>
+        <tr>
+            <td>Title</td>
+            <td>Id</td>
+        </tr>
         </thead>
         <tbody>
-            <tr th:each="blog : ${blogs}"></tr>
-            <td th:text="${blog.title}"></td>
-            <td>
-                <a th:ref="@{/blogs/{id}(id=${blog.id})}">
+        <tr th:each="blog : ${blogs}">
+            <td th:text="${blog.title}" />
+            <td th:text="${blog.id}" />
+                    <td>
+                <a th:href="@{/blogs/{id}(id=${blog.id})}">
                     Plačiau
                 </a>
             </td>
+        </tr>
         </tbody>
     </table>
 </body>

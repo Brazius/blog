@@ -8,6 +8,7 @@
         <h1 th:text="${blog.title}"></h1>
         <p th:text="${blog.id}"></p>
         <p th:text="${blog.description}"></p>
-
+        <p> <a th:href="@{/blogs/blog/{id}(id=${blog.id})}">Redaguoti</a> </p>
+        <p> <a th:href="@{/blogs/blog/{id}/delete(id=${blog.id})}">Ištrinti</a> </p>
 </body>
 </html>
