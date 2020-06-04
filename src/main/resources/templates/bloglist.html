@@ -4,19 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <title>Blog - all posts</title>
+    <link rel="stylesheet" th:href="@{/css/main.css}">
 </head>
 <body>
+    <div class="container">
     <table>
-        <thead>
-        <tr>
-            <td>Title</td>
-            <td>Id</td>
-        </tr>
-        </thead>
         <tbody>
         <tr th:each="blog : ${blogs}">
-            <td th:text="${blog.title}" />
-            <td th:text="${blog.id}" />
+            <td th:text="${blog.title}"><img src="">  </td>
+<!--            <td th:text="${blog.id}" />-->
                     <td>
                 <a th:href="@{/blogs/{id}(id=${blog.id})}">
                     Plačiau
@@ -25,5 +21,6 @@
         </tr>
         </tbody>
     </table>
+    </div>
 </body>
 </html>

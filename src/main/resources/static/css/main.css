@@ -1,0 +1,26 @@
+html{
+    font-size: 20px;
+    font-family: 'Helvetica Neue', sans-serif,'Open Sans';
+}
+
+.container{
+    width: 920px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tb {
+    text-align: center;
+}
+
+.bg:after{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    content: "";
+    background: rgb(173, 202, 230);
+    clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+    z-index: -1;
+}
