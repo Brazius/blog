@@ -1,0 +1,9 @@
+CREATE TABLE Blogs
+(
+    blog_id     INT UNSIGNED      NOT NULL AUTO_INCREMENT,
+    title       VARCHAR(50)       NOT NULL,
+    description VARCHAR           NOT NULL,
+    create_date TIMESTAMP         NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    last_update TIMESTAMP         NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    PRIMARY KEY (blog_id)
+);

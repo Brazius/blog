@@ -8,7 +8,8 @@
 <body>
     <h1> Blogo forma</h1>
     <form th:action="@{/blogs/blog}" method="post" th:object="${blog}">
-        <p>Id: <input type="text" th:field="*{id}"</p>
+        <input type="hidden" th:field="*{id}">
+        <p th:if="*{id != null}" th:text="'Id: ' + *{id}">Id: </p>
         <p>Title: <input type="text" th:field="*{title}"</p>
         <p>Description: <textarea cols="50" rows="10" th:field="*{description}"></textarea></p>
         <p><input type="submit" th:value="${blog.id != null ? 'Redaguoti' : 'Kurti'}"/>

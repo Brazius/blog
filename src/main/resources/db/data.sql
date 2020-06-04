@@ -1,0 +1,1 @@
+INSERT TO Blogs(title, description) VALUES('Zvejyba', 'Lietuvoje labiausiai paplitusi žūklė plūdine meškere bei spiningavimas, tačiau populiarėja ir dugninė bei muselinė žūklės. Žiemą visuose Lietuvos vandens telkiniuose, išskyrus Baltijos jūrą, dažniausiai taikoma poledinė žūklė. ')
